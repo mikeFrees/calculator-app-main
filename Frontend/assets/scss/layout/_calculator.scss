@@ -1,0 +1,10 @@
+#keys{
+  width: 80%;
+  border-radius: 20px;
+  height: 60%;
+  background: red;
+  padding: 5%;
+  display: grid;
+  gap: 3%;
+  grid: repeat(5, 1fr) / repeat(4, 1fr);
+}
