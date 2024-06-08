@@ -529,6 +529,12 @@ input:checked {
   transition: background 0.5s linear;
 }
 
+input:focus {
+  outline: none;
+  border-radius: 50px;
+  background: hsl(6, 63%, 50%);
+}
+
 label {
   text-align: center;
   display: flex;

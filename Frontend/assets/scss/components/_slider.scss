@@ -32,6 +32,12 @@ input:checked {
   transition: background 0.5s linear;
 }
 
+input:focus {
+  outline: none;
+  border-radius: 50px;
+  background: $t1-Red-key-toggle-bg;
+}
+
 label {
   text-align: center;
   display: flex;
