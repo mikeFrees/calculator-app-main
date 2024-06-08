@@ -399,12 +399,38 @@ summary,
   cursor: pointer;
 }
 
+@font-face {
+  font-family: "Spartan";
+  font-style: NORMAL;
+  font-weight: 700;
+  src: url(../../fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf) format("TTF");
+}
+body {
+  font: 700 32px/1.2 Spartan, Arial;
+  color: hsl(221, 14%, 31%);
+  text-align: center;
+}
+
+header, .attribution, a {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.5rem;
+}
+
+#display, .grey, .red {
+  color: hsl(0, 0%, 100%);
+}
+
+#display {
+  text-align: right;
+}
+
 header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 85%;
+  height: 10%;
 }
 
 main {
@@ -417,17 +443,17 @@ main {
 }
 
 #display {
-  width: 80%;
-  height: 10%;
+  width: 95%;
+  height: 15%;
   background: hsl(224, 36%, 15%);
   border-radius: 10px;
   margin-bottom: 20px;
 }
 
 #keys {
-  width: 80%;
+  width: 95%;
   border-radius: 10px;
-  height: 60%;
+  height: 80%;
   background: hsl(223, 31%, 20%);
   padding: 5%;
   display: grid;
@@ -456,9 +482,12 @@ main {
 }
 
 footer {
-  background: red;
+  background: hsl(223, 31%, 20%);
+  padding: 10px;
+  text-align: center;
   min-width: 150px;
-  width: 30%;
+  width: 50%;
+  height: 10%;
   border-radius: 10px;
 }
 

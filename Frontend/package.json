@@ -11,7 +11,7 @@
     "minify": "postcss ./assets/css/development/style-scss-compiled-prefixed.css --use cssnano -o ./assets/css/development/style-scss-compiled-prefixed-minified.css",
     "copy": "copyfiles -f ./assets/css/development/style-scss-compiled-prefixed-minified.css ./assets/css/public/",
     "rename": "renamer -f \"/^style-scss-compiled-prefixed-minified.css$/\" \"assets/css/public/*\" -r \"style.css\" \"assets/css/public/*\"",
-    "prepare": "npm run compile && npm run prefix && npm run minify && npm run copy && npm run rename"
+    "build": "npm run compile && npm run prefix && npm run minify && npm run copy && npm run rename"
   },
   "repository": {
     "type": "git",

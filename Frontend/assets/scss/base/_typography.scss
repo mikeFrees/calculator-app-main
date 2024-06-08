@@ -1,3 +1,22 @@
 // -----------------------------------------------------------------------------
 // This file contains typography CSS.
 // -----------------------------------------------------------------------------
+
+body {
+  font: 700 32px/1.2 $fonts;
+  color: $t1-clear-button-txt;
+  text-align: center;
+}
+
+header, .attribution, a {
+  color: $t1-dark-button-txt;
+  font-size: 1.5rem;
+}
+
+#display, .grey, .red {
+  color: $t1-dark-button-txt;
+}
+
+#display {
+  text-align: right;
+}
