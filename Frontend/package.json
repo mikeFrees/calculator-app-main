@@ -5,13 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "sass --watch assets/scss/main.scss assets/css/development/style-scss-compiled.css",
-    "compile": "sass assets/scss/main.scss assets/css/development/style-scss-compiled.css",
-    "prefix": "postcss ./assets/css/development/style-scss-compiled.css --use autoprefixer -o ./assets/css/development/style-scss-compiled-prefixed.css",
-    "minify": "postcss ./assets/css/development/style-scss-compiled-prefixed.css --use cssnano -o ./assets/css/development/style-scss-compiled-prefixed-minified.css",
-    "copy": "copyfiles -f ./assets/css/development/style-scss-compiled-prefixed-minified.css ./assets/css/public/",
-    "rename": "renamer -f \"/^style-scss-compiled-prefixed-minified.css$/\" \"assets/css/public/*\" -r \"style.css\" \"assets/css/public/*\"",
-    "build": "npm run compile && npm run prefix && npm run minify && npm run copy && npm run rename"
+    "build:css": "sass assets/scss/main.scss assets/css/development/style-scss-compiled.css && postcss ./assets/css/development/style-scss-compiled.css --use autoprefixer -o ./assets/css/development/style-scss-compiled-prefixed.css && postcss ./assets/css/development/style-scss-compiled-prefixed.css --use cssnano -o ./assets/css/development/style-scss-compiled-prefixed-minified.css",
+    "copy:css": "copyfiles -f ./assets/css/development/style-scss-compiled-prefixed-minified.css ./assets/css/public/",
+    "rename:css": "rimraf ./assets/css/public/style.css && renamer -f \"/^style-scss-compiled-prefixed-minified.css$/\" \"assets/css/public/*\" -r \"style.css\" \"assets/css/public/*\"",
+    "build": "npm run build:css && npm run copy:css && npm run rename:css"
   },
   "repository": {
     "type": "git",
@@ -27,6 +24,7 @@
     "postcss": "^8.4.28",
     "postcss-cli": "^10.1.0",
     "renamer": "^4.0.0",
+    "rimraf": "^5.0.7",
     "sass": "^1.65.1"
   }
 }
