@@ -9,4 +9,10 @@ header {
   align-items: center;
   width: 85%;
   height: 10%;
+
+  section {
+    display: flex;
+    flex-direction: row;
+  }
+
 }

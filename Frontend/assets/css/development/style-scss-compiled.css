@@ -406,7 +406,7 @@ summary,
   src: url(../../fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf) format("TTF");
 }
 body {
-  font: 700 32px/1.2 Spartan, Arial;
+  font: 700 24px/1.2 Spartan, Arial;
   color: hsl(221, 14%, 31%);
   text-align: center;
 }
@@ -431,6 +431,10 @@ header {
   align-items: center;
   width: 85%;
   height: 10%;
+}
+header section {
+  display: flex;
+  flex-direction: row;
 }
 
 main {
@@ -489,6 +493,47 @@ footer {
   width: 50%;
   height: 10%;
   border-radius: 10px;
+}
+
+#slider {
+  background: transparent;
+  width: 150px;
+  height: 80px;
+  display: grid;
+  grid-template: repeat(2, 1fr)/repeat(3, 1fr);
+  align-items: center;
+  justify-content: space-between;
+}
+
+#radio {
+  background: hsl(223, 31%, 20%);
+  border-radius: 50px;
+  width: 100%;
+  height: 40px;
+  grid-column: span 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+input {
+  appearance: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  transition: background 0.5s linear;
+}
+
+input:checked {
+  background: hsl(6, 63%, 50%);
+  transition: background 0.5s linear;
+}
+
+label {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 body {
