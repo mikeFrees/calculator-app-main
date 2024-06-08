@@ -1,10 +1,38 @@
-#keys{
+#display {
   width: 80%;
-  border-radius: 20px;
+  height: 10%;
+  background: $t1-screen-bg;
+  border-radius: $radius;
+  margin-bottom: 20px;
+}
+
+#keys {
+  width: 80%;
+  border-radius: $radius;
   height: 60%;
-  background: red;
+  background: $t1-toggle-keypad-bg;
   padding: 5%;
   display: grid;
   gap: 3%;
   grid: repeat(5, 1fr) / repeat(4, 1fr);
+}
+
+.button {
+  background: $t1-Light-grayish-orange-key-bg;
+  box-shadow: 0px 7px 0px $t1-Grayish-orange-key-shadow;
+  border-radius: $radius;
+}
+
+.span {
+  grid-column-start: span 2;
+}
+
+.grey {
+  background: $t1-key-bg;
+  box-shadow: 0px 7px 0px $t1-key-shadow;
+}
+
+.red {
+  background: $t1-Red-key-toggle-bg;
+  box-shadow: 0px 7px 0px $t1-Dark-red-key-shadow;
 }

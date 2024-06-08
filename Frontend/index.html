@@ -17,8 +17,7 @@
   <link href="./assets/css/development/style-scss-compiled.css" rel="stylesheet" />
 </head>
 <body> 
-
-  <main id="App" role="main">
+  <header>
     <h1>calc</h1>
 
     <section aria-labelled="theme-label">
@@ -29,14 +28,16 @@
         <li>3</li>
       </ul>
     </section>
+  </header>
 
+  <main id="App" role="main">
     <div id="display">0</div>
 
     <div id="keys">
       <div class="button" value="7">7</div>
       <div class="button" value="8">8</div>
       <div class="button" value="9">9</div>
-      <div class="button" value="DEL">DEL</div>
+      <div class="button grey" value="DEL">DEL</div>
       <div class="button" value="4">4</div>
       <div class="button" value="5">5</div>
       <div class="button" value="6">6</div>
@@ -49,8 +50,8 @@
       <div class="button" value="0">0</div>
       <div class="button" value="/">/</div>
       <div class="button" value="x">x</div>
-      <div class="button" value="RESET">RESET</div>
-      <div class="button" value="=">=</div>
+      <div class="button grey span" value="RESET">RESET</div>
+      <div class="button red span" value="=">=</div>
     </div>
   </main>
   

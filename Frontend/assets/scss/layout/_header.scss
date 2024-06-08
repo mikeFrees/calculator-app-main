@@ -1,3 +1,11 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
