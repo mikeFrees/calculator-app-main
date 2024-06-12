@@ -1,3 +1,44 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+.button {
+  background: $t1-Light-grayish-orange-key-bg;
+  box-shadow: 0px 7px 0px $t1-Grayish-orange-key-shadow;
+  border-radius: $radius;
+  transition: box-shadow 0.2s,
+  transform 0.2s;
+
+  &:active {
+    transition: box-shadow 0.2s,
+    transform 0.2s;
+    box-shadow: none;
+    transform: translateY(7px);
+  }
+}
+
+#keys {
+  max-width: 500px;
+  width: 95%;
+  border-radius: $radius;
+  height: 80%;
+  background: $t1-toggle-keypad-bg;
+  padding: 5%;
+  display: grid;
+  gap: 3%;
+  grid: repeat(5, 1fr) / repeat(4, 1fr);
+}
+
+.span {
+  grid-column-start: span 2;
+}
+
+.grey {
+  background: $t1-key-bg;
+  box-shadow: 0px 7px 0px $t1-key-shadow;
+}
+
+.red {
+  background: $t1-Red-key-toggle-bg;
+  box-shadow: 0px 7px 0px $t1-Dark-red-key-shadow;
+}
